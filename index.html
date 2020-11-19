@@ -1,46 +1,50 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <link rel="stylesheet" href="./css/site.css" />
+    <title>Discogs Word Cloud!</title>
 </head>
+
+        
 <body>
-    <h1>Discogs Word Cloud!</h1>
-    <h2>a completely useless display of my record collection by record label</h2>
+    <div id="flex-container-parent"></div>
+    <header>  
+        <div>  
+            <h1>Discogs Word Cloud!</h1>
+            <h2>a completely useless display of my record collection by record label</h2>
+        </div>  
+    </header>  
 
-    <div id="container-parent">
-    <div id="container">
-    </div>
-    </div>
+    <main>
+        <div id="flex-container">
+            */word cloud goes here               
+        </div>
+    </main>
+            <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-core.min.js"></script>
+            <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-tag-cloud.min.js"></script>
+            <script>
+                let data = [
+                    {x: "4AD", value: 2},
+                    {x: "Barsuk", value: 8},
+                    {x: "Domino", value: 46},
+                    {x: "Merge Records", value: 98},
+                    {x: "Jade Tree", value: 13},
+                    {x: "Lovitt", value: 5},
+                    {x: "Jagjaguwar", value: 7},
+                    {x: "Matador", value: 10},
+                    {x: "Polyvinyl Record Company", value: 9},
 
-<script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-core.min.js"></script>
-<script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-tag-cloud.min.js"></script>
-<script>
-    let data = [
-        {x: "4AD", value: 2},
-        {x: "Barsuk", value: 8},
-        {x: "Domino", value: 46},
-        {x: "Merge Records", value: 98},
-        {x: "Jade Tree", value: 13},
-        {x: "Lovitt", value: 5},
-        {x: "Jagjaguwar", value: 7},
-        {x: "Matador", value: 10},
-        {x: "Polyvinyl Record Company", value: 9},
+                
+                ];
+                
+                chart = anychart.tagCloud(data);
+                chart.container("flex-container");
+                chart.draw();
+                var customColorScale = anychart.scales.linearColor();
+                customColorScale.colors(["#ffcc00", "#00ccff"]);
 
-    
-    ];
-    
-    chart = anychart.tagCloud(data);
-    
-    // set the container id
-    chart.container("container");
-    
-    // initiate drawing the chart
-    chart.draw();
-    // create and configure a color scale.
-    var customColorScale = anychart.scales.linearColor();
-    customColorScale.colors(["#ffcc00", "#00ccff"]);
-
-</script>
+            </script>
 </body>
 </html>
 

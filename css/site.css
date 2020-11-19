@@ -5,13 +5,19 @@ html {
 }
 
 
-#container {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+#flex-container-parent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+}
 
-
+#flex-container {
+    order: 0;
+    flex: 100 1 auto;
+    align-self: stretch;
 }
 
 h1 {

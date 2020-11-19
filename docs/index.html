@@ -13,14 +13,16 @@
         <div>  
             <h1>Discogs Word Cloud!</h1>
             <h2>a completely useless display of my record collection by record label</h2>
+            <button onClick="sayThanks()"> click if this is the most amazing website you've ever seen</button>
+            <p id="thank"></p>
         </div>  
     </header>  
 
     <main>
-        <div id="flex-container">
-           word cloud goes here               
+        <div id="flex-container">             
         </div>
     </main>
+
             <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-core.min.js"></script>
             <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-tag-cloud.min.js"></script>
             <script>
@@ -45,6 +47,13 @@
                 customColorScale.colors(["#ffcc00", "#00ccff"]);
 
             </script>
+            <script>
+            function sayThanks() {
+                document.getElementById("thank").innerHTML = "oh wow, thanks!";
+
+            }
+            </script>
+            
 </body>
 </html>
 

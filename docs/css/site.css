@@ -7,14 +7,23 @@ onClick event!
 html {
     box-sizing: border-box;
     font-size: 16px;
-    background: url('../img/catroomguardian.jpeg');
+    background: url('/img/catroomguardian.jpeg') no-repeat center center fixed;
+    background-size: cover;
 }
+
+
+h1 {
+    font-size: 70px;
+    font-family: arial; 
+    background: -webkit-linear-gradient(#090979, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 
 #flex-container-parent {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: flex-start;
     align-content: stretch;
     align-items: center;
@@ -26,18 +35,14 @@ html {
     align-self: stretch;
 }
 
-h1 {
-    font-size: 72px;
-    font-family: arial; 
-    background: -webkit-linear-gradient(#090979, #00d4ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: flex; 
-    justify-content: center; 
+button {
+    background-color: white; 
+    border-radius: 50%;
+    border: 2px black;
+    transition-duration: 0.4s;
 }
 
-h2 {
-    display: flex; 
-    justify-content: center;
-     
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
 }

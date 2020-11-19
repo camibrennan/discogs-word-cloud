@@ -1,3 +1,9 @@
+TODO: 
+Must use CSS transition and/or animation, such as for a pleasantly gradual hover transition eect.
+use flexbox to get word cloud to take up entire body 
+clean up names - use BEM 
+onClick event!
+
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -16,7 +22,7 @@ html {
 
 #flex-container {
     order: 0;
-    flex: 100 1 auto;
+    flex: 1 30px;
     align-self: stretch;
 }
 

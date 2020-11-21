@@ -1,13 +1,5 @@
-TODO: 
-Must use CSS transition and/or animation, such as for a pleasantly gradual hover transition eect.
-use flexbox to get word cloud to take up entire body 
-clean up names - use BEM 
-onClick event!
-
 html {
-    box-sizing: border-box;
-    font-size: 16px;
-    background: url('/img/catroomguardian.jpeg') no-repeat center center fixed;
+    background: url('../img/catroomguardian.jpeg'); 
     background-size: cover;
 }
 
@@ -21,18 +13,15 @@ h1 {
 }
 
 
-
-#flex-container-parent {
+#maincontent {
     display: flex;
-    justify-content: flex-start;
-    align-content: stretch;
-    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
-#flex-container {
-    order: 0;
-    flex: 1 30px;
-    align-self: stretch;
+#maincontent-worldcloud {
+
+
 }
 
 button {

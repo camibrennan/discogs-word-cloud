@@ -8,20 +8,18 @@
 
         
 <body>
-    <div id="flex-container-parent"></div>
-    <header>  
-        <div>  
-            <h1>Discogs Word Cloud!</h1>
-            <h2>a completely useless display of my record collection by record label</h2>
-            <button onClick="sayThanks()"> click if this is the most amazing website you've ever seen</button>
-            <p id="thank"></p>
-        </div>  
-    </header>  
-
-    <main>
-        <div id="flex-container">             
-        </div>
-    </main>
+    <section>
+        <div id="maincontent">
+            <header>  
+                <h1>Discogs Word Cloud!</h1>
+                <h2>a completely useless display of my record collection by record label</h2>
+                <button onClick="sayThanks()"> click if this is the most amazing website you've ever seen</button>
+                <p id="thank"></p>
+            </header>  
+            <div id="maincontent-wordcoud">             
+            </div>
+        </div> 
+    </section>
 
             <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-core.min.js"></script>
             <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-tag-cloud.min.js"></script>
@@ -41,7 +39,7 @@
                 ];
                 
                 chart = anychart.tagCloud(data);
-                chart.container("flex-container");
+                chart.container("maincontent-wordcoud");
                 chart.draw();
                 var customColorScale = anychart.scales.linearColor();
                 customColorScale.colors(["#ffcc00", "#00ccff"]);
